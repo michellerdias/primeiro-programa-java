@@ -1,9 +1,9 @@
 package cursojava.classes;
 
-//Esta é nossa classe/objeto que representa o aluno
+//Esta Ã© nossa classe/objeto que representa o aluno
 public class Aluno {
 	
-	//Esses são os atributos do Aluno:
+	//Esses sÃ£o os atributos do Aluno:
 	public String nome;
 	public int idade;
 	String dataNascimento;
@@ -15,8 +15,13 @@ public class Aluno {
 	String nomeEscola;
 	String serieMatriculado;
 	
-	public Aluno() { //Cria os dados na memória - sendo padrão do Java
-	//Quando dá um "new", ele chama esse construtor
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private double nota4;
+	
+	public Aluno() { //Cria os dados na memÃ³ria - sendo padrÃ£o do Java
+	//Quando dÃ¡ um "new", ele chama esse construtor
 	//
 	}
 	
@@ -29,9 +34,9 @@ public class Aluno {
 		idade = idadePadrao;
 	}
 	
-	//Veremos os métodos SETTERS e GETTERS do objeto
-	//SET é para adicionar ou receber dados para os atributos
-	//GET é para resgatar ou obter o valor do atributo
+	//Veremos os mÃ©todos SETTERS e GETTERS do objeto
+	//SET Ã© para adicionar ou receber dados para os atributos
+	//GET Ã© para resgatar ou obter o valor do atributo
 	
 	//Recebe dados
 	public void setNome(String nome) {
@@ -112,8 +117,64 @@ public class Aluno {
 	public void setSerieMatriculado(String serieMatriculado) {
 		this.serieMatriculado = serieMatriculado;
 	}
+
+	public double getNota1() {
+		return nota1;
+	}
+
+	public void setNota1(double nota1) {
+		this.nota1 = nota1;
+	}
+
+	public double getNota2() {
+		return nota2;
+	}
+
+	public void setNota2(double nota2) {
+		this.nota2 = nota2;
+	}
+
+	public double getNota3() {
+		return nota3;
+	}
+
+	public void setNota3(double nota3) {
+		this.nota3 = nota3;
+	}
+
+	public double getNota4() {
+		return nota4;
+	}
+
+	public void setNota4(double nota4) {
+		this.nota4 = nota4;
+	}
+	
+	//mÃ©todo que retorna a mÃ©dia do aluno
+	public double getMediaNota() {
+		return ((nota1 + nota2 + nota3 + nota4) /4);
+		
+	}
 	
 	
+	public boolean getAlunoAprovado() {
+		double media = this.getMediaNota();
+		if (media >= 60) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public String getAlunoAprovado2() {
+		double media = this.getMediaNota();
+		if (media >= 60) {
+			return "Aluno Aprovado";
+		} else {
+			return "Aluno Reprovado";
+		}
+	}
 	
 	
 }
+
