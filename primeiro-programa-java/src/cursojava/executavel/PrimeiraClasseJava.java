@@ -8,7 +8,7 @@ public class PrimeiraClasseJava {
 
 	public static void main(String[] args) {
 		
-		String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
+		/*String nome = JOptionPane.showInputDialog("Qual o nome do aluno?");
 		String idade = JOptionPane.showInputDialog("Qual a idade do aluno?");
 		String dataNascimento = JOptionPane.showInputDialog("Qual a data de nascimento?");
 		String registroGeral = JOptionPane.showInputDialog("Registro Geral");
@@ -24,32 +24,49 @@ public class PrimeiraClasseJava {
 		String nota4 = JOptionPane.showInputDialog("Qual a nota 4?");
 		
 		//new Aluno() é uma instância (Criação de Objeto)
-		Aluno aluno1 = new Aluno(); //Agora temos um objeto real na memória
-		aluno1.setNome(nome);
-		aluno1.setIdade(Integer.valueOf(idade));
-		aluno1.setDataNascimento(dataNascimento);
-		aluno1.setRegistroGeral(registroGeral);
-		aluno1.setCpf(cpf);
-		aluno1.setNomeMae(nomeMae);
-		aluno1.setNomePai(nomePai);
-		aluno1.setDataMatricula(dataMatricula);
-		aluno1.setSerieMatriculado(serieMatriculado);
-		aluno1.setNomeEscola(nomeEscola);
-		aluno1.setNota1(Double.parseDouble(nota1));
-		aluno1.setNota2(Double.parseDouble(nota2));
-		aluno1.setNota3(Double.parseDouble(nota3));
-		aluno1.setNota4(Double.parseDouble(nota4));
+		Aluno aluno = new Aluno(); //Agora temos um objeto real na memória
+		aluno.setNome(nome);
+		aluno.setIdade(Integer.valueOf(idade));
+		aluno.setDataNascimento(dataNascimento);
+		aluno.setRegistroGeral(registroGeral);
+		aluno.setCpf(cpf);
+		aluno.setNomeMae(nomeMae);
+		aluno.setNomePai(nomePai);
+		aluno.setDataMatricula(dataMatricula);
+		aluno.setSerieMatriculado(serieMatriculado);
+		aluno.setNomeEscola(nomeEscola);
+		aluno.setNota1(Double.parseDouble(nota1));
+		aluno.setNota2(Double.parseDouble(nota2));
+		aluno.setNota3(Double.parseDouble(nota3));
+		aluno.setNota4(Double.parseDouble(nota4));
 			
 		
-		System.out.println("Nome é = " + aluno1.getNome());
-		System.out.println("Idade = " + aluno1.getIdade());
-		System.out.println("Data de nascimento = " + aluno1.getDataNascimento());
-		System.out.println("Média = " + aluno1.getMediaNota());
-		System.out.println("Idade = " + aluno1.getIdade());
+		System.out.println("Nome é = " + aluno.getNome());
+		System.out.println("Idade = " + aluno.getIdade());
+		System.out.println("Data de nascimento = " + aluno.getDataNascimento());
+		System.out.println("Média = " + aluno.getMediaNota());
 		
+		System.out.println(aluno.getAlunoAprovado() ? "Aprovado" : "Reprovado"); //true=aprovado false=reprovado
+		System.out.println(aluno.getAlunoAprovado2());
 		
-		System.out.println(aluno1.getAlunoAprovado() ? "Aprovado" : "Reprovado"); //true=aprovado false=reprovado
-		System.out.println(aluno1.getAlunoAprovado2());
+		System.out.println(aluno.toString());*/
+		
+		//Equals e Hashcode (Diferenciar objetos)
+		
+		Aluno aluno1 = new Aluno();
+		aluno1.setNome("Alex");
+		
+		Aluno aluno2 = new Aluno();
+		aluno2.setNome("Alex");
+		
+		if (aluno1.equals(aluno2)) {
+			System.out.println("Alunos são iguais.");
+		}else {
+			System.out.println("Alunos não são iguais");
+		//O java diferencia os objetos com códigos (em memória) por trás
+			
+		}
+		
 		
 	}
 
